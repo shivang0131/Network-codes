@@ -1,0 +1,49 @@
+
+Ethernet Header
+	|-Source Address : XX-XX-XX-XX-XX-XX
+	|-Destination Address : XX-XX-XX-XX-XX-XX
+	|-Protocol : 8
+
+
+
+
+
+
+
+
+IP Header
+	|-Version : 4
+	|-Internet Header Length : 5 DWORDS or 20 Bytes
+	|-Type Of Service : 0
+	|-Total Length : 1410 Bytes
+	|-Identification : 23513
+	|-Time To Live : 128
+	|-Protocol : 6
+	|-Header Checksum : 21754
+	|-Source IP : 49.44.211.77
+	|-Destination IP : 192.168.191.XXX
+
+
+
+
+
+
+
+TCP Header
+	|-Source Port      : 12
+	|-Destination Port : 10726
+	|-Sequence Number    : 927465552
+	|-Acknowledge Number : 1458988102
+	|-Header Length      : 0 DWORDS or 0 BYTES
+	|-Urgent Flag          : 0
+	|-Acknowledgement Flag : 0
+	|-Push Flag            : 0
+	|-Reset Flag           : 0
+	|-Synchronise Flag     : 0
+	|-Finish Flag          : 0
+	|-Window         : 17664
+	|-Checksum       : 1410
+	|-Urgent Pointer : 55643
+
+
+###########################################################
