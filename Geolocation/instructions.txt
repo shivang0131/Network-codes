@@ -1,0 +1,17 @@
+This code will create an HTML file which will draw red line between two locations on Map.
+
+Requirements-
+
+on Terminal(having python and pip installed) or Anaconda Prompt, run this command
+
+pip install gmplot
+
+then simply run-
+
+python geolocation-plot.py
+
+
+--remember to edit the location for storing the HTML file because the one in the code is corresponding to my system.
+--you can zoom out to get a better view of the location since the line seems to be overflowing.
+--in the latitude_list and longitude_list you can put any number of coordinates to plot lines between them.
+--on the terminal (or Anaconda Prompt), it'll print several other data like city, ZIP code, service provider, etc. You can use them if you want.
