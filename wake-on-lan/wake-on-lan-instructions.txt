@@ -1,0 +1,52 @@
+SERVER SIDE INSTRUCTIONS-
+
+sudo apt-get install ethtool -y
+
+sudo ethtool -s INTERFACE wol g    (where INTERFACE is name of the network interface to be used for WOL. in my virtual machine it's eth0)
+
+sudo apt-get install wakeonlan -y
+
+but doing above this will not bind the enabling of that interface to WOL(Wake On LAN), and it won't survive a reboot. To solve this problem run this commands on the machine.
+
+sudo nano /etc/systemd/system/wol.service
+
+paste this thing in the opened file.
+
+[Unit]
+Description=Configure Wake On LAN
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ethtool -s INTERFACE wol g      (INTERFACE is the name of interface.)
+
+[Install]
+WantedBy=basic.target 
+
+
+
+save and close file. Then run this command.
+
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable wol.service
+
+sudo systemctl start wol.service
+
+
+After all this, in file mac-list.txt , enter the MAC address of the 10 machines and then run following commands
+
+ gcc wakeonlan.c
+ ./a.out
+
+
+
+
+ On the REMOTE machines which are to be powered on-
+
+ run this command-
+
+ ethtool -s eth0 wol g   //instead of eth0, use the name of ethernet interface
+
+ this will set the machine to listen for magic packets.
+
