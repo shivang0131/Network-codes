@@ -20,7 +20,7 @@ int main()
 
 
     printf("\n Opening trace.txt....\n");
-    system("vi trace.txt"); //replace open with start in Windows OS.
+    system("vi trace.txt"); //replace vi with start in Windows OS.
     
     return 0;
 }
