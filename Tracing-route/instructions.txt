@@ -1,0 +1,5 @@
+--This code will trace the route from your machine to the entered domain/IP address.
+
+--It can also be run on Windows OS. Follow the comment inside the code. Make sure have gcc installed.
+
+--The output will be stored in a file named trace.txt.
